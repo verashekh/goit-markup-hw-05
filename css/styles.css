@@ -101,7 +101,7 @@ ul {
   position: relative;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.lincs.active {
+.links.active {
   color: #404bbf;
 }
 .links.active::after {
@@ -338,14 +338,8 @@ ul {
 }
 
 .media-icon {
-  display: flex;
-  justify-content: space-between;
-  gap: 24px;
-  align-items: center;
-  background-color: #4d5ae5;
   width: 40px;
   height: 40px;
-  border-radius: 50%;
 }
 
 /* Our portfolio */
@@ -448,6 +442,9 @@ ul {
 .container-logo-web-footer {
   margin-right: 120px;
 }
+.container-media-footer {
+  margin-right: 80px;
+}
 
 .social-media-icon-footer {
   display: flex;
@@ -457,13 +454,6 @@ ul {
 .media-icon-footer {
   width: 40px;
   height: 40px;
-  display: flex;
-  justify-content: space-between;
-  gap: 16px;
-  align-items: center;
-  background-color: #4d5ae5;
-  border-radius: 50%;
-  transition: background-color 250ms ease-in-out 0ms;
 }
 .insta-footer {
   width: 100%;
@@ -481,9 +471,61 @@ ul {
 .insta-footer:focus {
   background-color: #31d0aa;
 }
-/* Modal window */
+.form-label-footer {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+.form-input {
+  padding: 8px 16px;
+  border: 1px solid #fff;
+  border-radius: 4px;
+  width: 264px;
+  height: 40px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+  background-color: #2e2f42;
+  color: #fff;
+  margin-right: 24px;
+}
+
+.form-input::placeholder {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+  color: #fff;
+}
+.form-footer {
+  display: flex;
+}
+.subscribe {
+  font-family: 'Roboto', sans-serif;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  border: none;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #fff;
+  background-color: #4d5ae5;
+  margin-top: 40px;
+  width: 165px;
+  height: 40px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.subscribe:hover,
+.subscribe:focus {
+  background-color: #404bbf;
+}
+/* Modal content */
 .modal-overlay {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(46, 47, 66, 0.4);
   position: fixed;
   top: 0;
   left: 0;
@@ -493,9 +535,9 @@ ul {
   display: flex;
   justify-content: center;
   align-items: center;
-  opacity: 0;
-  pointer-events: none;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 1;
+  pointer-events: auto;
 }
 .modal-overlay.is-open {
   opacity: 1;
@@ -503,6 +545,225 @@ ul {
 }
 
 .modal {
-  max-width: 408px;
-  max-height: 584px;
+  position: relative;
+  background-color: #fff;
+  width: 408px;
+  height: 584px;
+  padding: 72px 24px 24px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.close-modal-btn {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  cursor: pointer;
+  fill: #2e2f42;
+  background-color: #e7e9fc;
+  stroke-width: 1px;
+  stroke: rgba(0, 0, 0, 0.1);
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.close-modal-btn:hover,
+.close-modal-btn:focus {
+  fill: #fff;
+  background-color: #404bbf;
+  border: none;
+}
+
+.form-title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  text-align: center;
+  color: #2e2f42;
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+.container-inputs {
+  display: flex;
+  flex-direction: column;
+}
+.form {
+  margin: 0px auto;
+  width: 360px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.form-label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16667;
+  letter-spacing: 0.04em;
+  color: #8e8f99;
+}
+.input-wrapper {
+  position: relative;
+  width: 100%;
+  width: 360px;
+}
+.input-person {
+  position: absolute;
+  left: 16px;
+  top: 11px;
+  pointer-events: none;
+  fill: #2e2f42;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.input-icon {
+  position: absolute;
+  left: 16px;
+  top: 8px;
+  pointer-events: none;
+  fill: #2e2f42;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.form-input-input {
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 4px;
+  width: 360px;
+  height: 40px;
+  font-family: inherit;
+  background-color: #fff;
+  outline: none;
+  box-shadow: none;
+  padding-left: 40px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.form-textarea {
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 4px;
+  width: 360px;
+  height: 120px;
+  font-family: inherit;
+  background-color: #fff;
+  outline: none;
+  box-shadow: none;
+  resize: none;
+  padding: 8px 16px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.input-wrapper:hover .form-input-input {
+  border-color: #4d5ae5;
+}
+
+.input-wrapper:hover .input-icon {
+  fill: #4d5ae5;
+}
+.input-wrapper:hover .input-person {
+  fill: #4d5ae5;
+}
+.input-wrapper:hover .form-textarea {
+  border-color: #4d5ae5;
+}
+.input-wrapper:focus .form-input-input {
+  border-color: #4d5ae5;
+}
+
+.input-wrapper:focus .input-icon {
+  fill: #4d5ae5;
+}
+.input-wrapper:focus .input-person {
+  fill: #4d5ae5;
+}
+.input-wrapper:focus .form-textarea {
+  border-color: #4d5ae5;
+}
+
+/* Checkbox */
+.checkbox {
+  width: 360px;
+  position: relative;
+  display: flex;
+  margin-top: 16px;
+  margin-left: 0;
+  padding-left: 0;
+  gap: 8px;
+}
+.checkbox-text {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16667;
+  letter-spacing: 0.04em;
+  color: #8e8f99;
+  margin-left: 8px;
+}
+.privacy-policy {
+  line-height: 1.33333;
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  color: #4d5ae5;
+}
+
+.icon-wrapper {
+  position: relative;
+  width: 16px;
+  height: 16px;
+}
+
+/* Базова рамка */
+.icon-default {
+  fill: none;
+  stroke: rgba(46, 47, 66, 0.4); /* сірий контур */
+  stroke-width: 2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 250ms ease;
+  opacity: 1;
+}
+
+/* Стан "hover" з синім фоном і білою галочкою */
+.icon-hover {
+  stroke-width: 2;
+  background-color: #404bbf;
+  border-radius: 2px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 250ms ease;
+  opacity: 0;
+  fill: none;
+  stroke: #ffffff;
+  stroke-width: 2;
+  fill: #ffffff;
+}
+
+/* Показати галочку при наведенні на .icon-wrapper */
+.icon-wrapper:hover .icon-default {
+  opacity: 0;
+}
+
+.icon-wrapper:hover .icon-hover {
+  opacity: 1;
+}
+.feedback-btn {
+  border-radius: 4px;
+  padding: 16px 32px;
+  width: 169px;
+  height: 56px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+  background: #4d5ae5;
+  margin-top: 24px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  text-align: center;
+  color: #fff;
 }
