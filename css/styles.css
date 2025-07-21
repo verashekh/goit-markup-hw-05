@@ -536,6 +536,11 @@ ul {
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+.modal-overlay.is-open {
+  opacity: 1;
+  pointer-events: auto;
+  visibility: visible;
+}
 
 .modal {
   position: absolute;
@@ -676,9 +681,10 @@ ul {
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
   background-color: transparent;
+  resize: none;
   padding: 8px 16px;
   outline: transparent;
-  resize: none;
+
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .user-comment:hover,
@@ -706,11 +712,18 @@ ul {
   justify-content: center;
   fill: transparent;
   margin-right: 8px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.visually-hidden[type='checkbox']:checked + .privacy {
-  color: #404bbf;
+
+.visually-hidden:checked + .privacy {
+  background-color: #404bbf;
   border: none;
   fill: #f4f4fd;
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
 }
 .privacy-policy {
   color: #4d5ae5;
