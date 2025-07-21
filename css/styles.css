@@ -542,13 +542,17 @@ ul {
 .modal-overlay.is-open {
   opacity: 1;
   pointer-events: auto;
+  visibility: visible;
 }
 
 .modal {
-  position: relative;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   background-color: #fff;
   width: 408px;
-  height: 584px;
+  min-height: 584px;
   padding: 72px 24px 24px 24px;
   display: flex;
   flex-direction: column;
@@ -728,7 +732,7 @@ ul {
 }
 
 /* Стан "hover" з синім фоном і білою галочкою */
-.icon-hover {
+.icon-check {
   stroke-width: 2;
   background-color: #404bbf;
   border-radius: 2px;
