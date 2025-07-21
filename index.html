@@ -512,20 +512,22 @@
             </li>
           </ul>
         </div>
+
+        <!-- Form in footer-->
         <div class="container-subscribe-footer">
+          <p class="social-media-title">Subscribe</p>
           <form class="form-footer">
             <label class="form-label-footer">
-              <span class="social-media-title">Subscribe</span>
               <input
-                type="text"
-                class="form-input"
+                type="email"
+                class="form-input-footer"
                 name="email"
                 placeholder="E-mail"
               />
             </label>
             <button class="subscribe" type="submit">
               Subscribe
-              <svg class="media" width="24" height="24">
+              <svg class="form-icon-footer" width="24" height="24">
                 <use href="./images/icons.svg#icon-frame"></use>
               </svg>
             </button>
@@ -537,75 +539,94 @@
     <!-- Modal content -->
     <div class="modal-overlay is-open">
       <div class="modal">
+        <!-- Button -->
         <button class="close-modal-btn" type="button">
           <svg class="close" width="8" height="8">
             <use href="./images/icons.svg#icon-close"></use>
           </svg>
         </button>
+
+        <!-- Paragraph -->
         <p class="form-title">Leave your contacts and we will call you back</p>
-        <div class="container-inputs">
-          <form
-            class="form"
-            name="leave-your-contacts"
-            autocomplete="off"
-            novalidate
-          >
-            <label class="form-label">
+
+        <!-- Form -->
+        <div class="form" name="leave-your-contacts" autocomplete="off">
+          <!-- Name -->
+          <div class="container-inputs">
+            <label class="form-label" for="user-name">
               Name
-              <div class="input-wrapper">
-                <svg class="input-person" width="18" height="18">
+              <div class="input-icon-cont">
+                <input type="text" class="user-name" id="user-name" />
+                <svg class="input-icon" width="18" height="24">
                   <use href="./images/icons.svg#icon-person"></use>
                 </svg>
-                <input type="text" class="form-input-input" name="name" />
               </div>
             </label>
-            <label class="form-label">
+          </div>
+
+          <!-- Phone -->
+          <div class="container-inputs">
+            <label class="form-label" for="user-name">
               Phone
-              <div class="input-wrapper">
+              <div class="input-icon-cont">
+                <input type="text" class="user-name" id="user-name" />
                 <svg class="input-icon" width="18" height="24">
                   <use href="./images/icons.svg#icon-phone"></use>
                 </svg>
-                <input type="tel" class="form-input-input" name="contact_tel" />
               </div>
             </label>
-            <label class="form-label">
+          </div>
+
+          <!-- E-mail -->
+          <div class="container-inputs">
+            <label class="form-label" for="user-name">
               Email
-              <div class="input-wrapper">
+              <div class="input-icon-cont">
+                <input type="text" class="user-name" id="user-name" />
                 <svg class="input-icon" width="18" height="24">
                   <use href="./images/icons.svg#icon-email"></use>
                 </svg>
-                <input type="email" class="form-input-input" name="email" />
               </div>
             </label>
-            <label class="form-label"
-              >Comment
-              <div class="input-wrapper">
+          </div>
+
+          <!-- Comment-->
+          <div class="container-inputs">
+            <label class="form-label" for="user-comment">
+              Comment
+              <div class="input-icon-cont">
                 <textarea
-                  class="form-textarea"
-                  name="comment"
+                  type="text"
+                  class="user-comment"
+                  id="user-comment"
                   rows="3"
                   placeholder="Text input"
                 ></textarea>
               </div>
             </label>
-          </form>
+          </div>
+
+          <!-- Checkbox -->
+          <div class="checkbox-cont">
+            <input
+              type="checkbox"
+              class="visually-hidden"
+              id="user-privacy"
+              value="true"
+            />
+            <label for="user-privacy" class="form-label" for="user-privacy"
+              >I accept the terms and conditions of the><span class="privacy"
+                ><svg class="icon-check" width="10" height="8">
+                  <use href="./images/icons.svg#icon-check"></use>
+                </svg>
+              </span>
+              <a href="" class="privacy-policy">Privacy Policy</a>
+            </label>
+          </div>
         </div>
 
-        <!-- checkbox -->
-        <div class="checkbox">
-          <div class="icon-wrapper">
-            <svg class="icon-default" width="16" height="16">
-              <use href="./images/icons.svg#icon-default"></use>
-            </svg>
-            <svg class="icon-check" width="10" height="8">
-              <use href="./images/icons.svg#icon-check"></use>
-            </svg>
-          </div>
-          <p class="checkbox-text">
-            I accept the terms and conditions of the
-            <span class="privacy-policy"> Privacy Policy</span>
-          </p>
-        </div>
+        <!-- Button -->
+
         <button class="feedback-btn" type="submit">Send</button>
       </div>
     </div>
